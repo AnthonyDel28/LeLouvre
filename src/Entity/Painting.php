@@ -20,9 +20,6 @@ class Painting
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $created = null;
-
     #[ORM\Column(length: 255)]
     private ?string $author = null;
 
@@ -45,6 +42,9 @@ class Painting
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     private ?category $category = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $date = null;
 
     public function getId(): ?int
     {
@@ -71,18 +71,6 @@ class Painting
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getCreated(): ?\DateTimeInterface
-    {
-        return $this->created;
-    }
-
-    public function setCreated(\DateTimeInterface $created): self
-    {
-        $this->created = $created;
 
         return $this;
     }
@@ -167,6 +155,18 @@ class Painting
     public function setCategory(?category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(string $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }
