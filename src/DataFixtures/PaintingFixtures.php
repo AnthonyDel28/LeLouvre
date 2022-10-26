@@ -77,7 +77,7 @@ class PaintingFixtures extends Fixture implements DependentFixtureInterface
        'La grande Vague de Kanagawa',
        'Terrasse du café le soir',
        'Le Désespéré',
-       'Le baiser',
+       'Un Baiser',
        'Le Syndic de la guilde des drapiers',
        'La mort de Socrate',
        'Femmes de Tahiti'
