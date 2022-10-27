@@ -5,13 +5,12 @@ namespace App\DataFixtures;
 use App\Entity\Painting;
 use App\Entity\Category;
 use App\Entity\Technic;
-use App\Repository\TechnicRepository;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use Cocur\Slugify\Slugify;
 use Faker;
-use App\Repository\CategoryRepository;
+
 
 
 class PaintingFixtures extends Fixture implements DependentFixtureInterface

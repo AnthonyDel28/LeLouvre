@@ -37,11 +37,11 @@ class Painting
 
     #[ORM\ManyToOne(inversedBy: 'paintings')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?technic $technic = null;
+    private ?Technic $technic = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?category $category = null;
+    private ?Category $category = null;
 
     #[ORM\Column(length: 255)]
     private ?string $date = null;
