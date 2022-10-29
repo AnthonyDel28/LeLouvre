@@ -63,3 +63,22 @@ body {
 .nav-links a:hover {
     color: grey;
 }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.slider {
+    --bs-gutter-x: 0;
+}
+.container-fluid {
+    padding: 0;
+}
+.slider img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* or object-fit: contain; */
+    --bs-gutter-x: 0;
+}
