@@ -16,13 +16,79 @@
     </div>
     <div class="container-fluid">
         <div class="cards d-flex justify-content-evenly">
-            <div class="col-9 col-md-3 famous-card">
-                <div class="famous-card-img">
+            <div class="col-4 col-md-3 famous-card">
+                <div class="card-img">
                     <img src="{{ asset('img/paints/la-joconde.jpg') }}" alt="">
                 </div>
+                    <div class="card-infos">
+                        <h3>La Joconde</h3>
+                        <h5>Léonard De Vinci</h5>
+                        <a href="">
+                            <button type="button" class="btn btn-light">Découvrir</button>
+                        </a>
+                    </div>
             </div>
-            <div class="col-9 col-md-3 famous-card"></div>
-            <div class="col-9 col-md-3 famous-card"></div>
+            <div class="col-4 col-md-3 famous-card">
+                <div class="card-img">
+                    <img src="{{ asset('img/paints/la-nuit-etoilee.jpg') }}" alt="">
+                </div>
+                <div class="card-infos">
+                    <h3>La nuit étoilée</h3>
+                    <h5>Vincent Van Gogh</h5>
+                    <a href="">
+                        <button type="button" class="btn btn-light">Découvrir</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-4 col-md-3 famous-card">
+                <div class="card-img">
+                    <img src="{{ asset('img/paints/un-baiser.jpg') }}" alt="">
+                </div>
+                <div class="card-infos">
+                    <h3>Le Baiser</h3>
+                    <h5>Francesco Hayez</h5>
+                    <a href="">
+                        <button type="button" class="btn btn-light">Découvrir</button>
+                    </a>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="container home-about mt-5 mb-5">
+        <hr>
+        <div class="row d-flex flex-row-reverse">
+            <div class="col-10 m-5 text-align-right">
+                <h2>Le Louvre c'est ...</h2>
+            </div>
+        </div>
+        <div class="row col-12 home-about-infos">
+            <div class="col-6 about-square">
+                <div class="col-12">
+                    <ul>
+                        <li><i class="icofont-ui-timer"></i>  Plus de 1000 ans d'histoire</li>
+                        <li><i class="icofont-paint"></i>  Des oeuvres du monde entier</li>
+                        <li><i class="icofont-compass-alt"></i> Un voyage à travers le temps et l'espace</li>
+                        <li><i class="icofont-info-circle"></i> Des visites sur mesure</li>
+                        <li><i class="icofont-institution"></i> Une institution unique au monde</li>
+                        <li><i class="icofont-library"></i> Les plus beaux trésors de notre patrimoine</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 about-square-img">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid contact-slider">
+       <div class="container">
+          <div class="row">
+              <div class="contact-content">
+                  <h3>Restons en contact</h3>
+                  <h3>Recevez de nos nouvelles!</h3>
+                  <a href="">
+                      <button type="button" class="btn btn-light">Nous contacter</button>
+                  </a>
+              </div>
+          </div>
+       </div>
     </div>
 {% endblock %}

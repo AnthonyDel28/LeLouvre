@@ -91,15 +91,89 @@ body {
 
 
 .famous-card {
-    height: 750px;
     background-color: black;
+    overflow: hidden;
 }
 
-.famous-card-img {
-    height: 500px;
-}
-
-.famous-card-img img {
-    width: 100%;
+.card-img {
     object-fit: contain;
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.card-img img {
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    transition: transform 1s;
+}
+
+.card-img img:hover {
+    transform: scale(1.2);
+    height:500px;
+    width:100%;
+}
+
+.card-infos {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.card-infos button {
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-square-img {
+    background-image: url('../img/utils/home-about.jpg');
+    background-size: auto;
+    background-position: left;
+}
+
+.about-square ul {
+    list-style-type: none;
+}
+
+.about-square li {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 1.3vw;
+}
+
+.contact-slider {
+    background-image: url("../img/utils/home-contact.jpg");
+    height: 300px;
+}
+
+.contact-slider h3 {
+    color: white;
+}
+
+.contact-content {
+    margin-top: 75px;
+}
+
+footer h2,
+footer hr{
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.footer-links a {
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+.credits h6 {
+    color: white;
+    font-family: Helvetica;
+}
+
+.credits i {
+    color: red;
 }
