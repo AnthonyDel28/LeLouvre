@@ -1,7 +1,28 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Le Louvre - Accueil{% endblock %}
-
 {% block body %}
-
+    <div class="container-fluid">
+        <div class="container-fluid row slider">
+            <div class="container-fluid col-lg-12">
+                <img src="{{ asset('img/slider/slider_1.jpg') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 m-5">
+                <h2>Nos vedettes</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="cards d-flex justify-content-evenly">
+            <div class="col-9 col-md-3 famous-card">
+                <div class="famous-card-img">
+                    <img src="{{ asset('img/paints/la-joconde.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="col-9 col-md-3 famous-card"></div>
+            <div class="col-9 col-md-3 famous-card"></div>
+        </div>
+    </div>
 {% endblock %}
