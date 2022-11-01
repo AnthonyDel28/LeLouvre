@@ -216,13 +216,25 @@ footer i {
     color: red;
 }
 
+.gallery {
+    margin-bottom: 100px;
+}
+
+.card {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    --bs-card-border-radius: 0;
+}
+
 .card-img {
     object-fit: cover;
     width: 100%;
     height: 500px;
-    border: 1px solid black;
     overflow: hidden;
     transition: transform 1s;
+    border-radius: 0;
+    border: none;
 }
 
 .card-img img:hover {
@@ -232,7 +244,11 @@ footer i {
     overflow: hidden;
 }
 
-.gallery .card {
-    border: none;
-    height: 700px;
+.main-galery {
+    overflow: hidden;
+}
+
+.card-body h5,
+.card-body h6 {
+    color: black;
 }

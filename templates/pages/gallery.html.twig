@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %} La gallerie {% endblock %}
+{% block title %} Gallerie - Le Louvre {% endblock %}
 {% block body %}
     <div class="container gallery">
         <div class="row text-center mt-5">
@@ -15,21 +15,23 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="row justify-content-between filter-container">
-            {% for paints in paintings %}
-                <div class="card col-6 col-sm-6 col-md-4 filter-item" data-category="{{ paints.category.id }}" data-sort="value">
-                    <div class="card-img">
-                        <img src="{{ asset('img/paints/' ~ paints.image) }}" class="card-img-top" alt="...">
+        <div class="filter-container" style="overflow: hidden">
+            <div class="row main-galery" style="overflow: hidden">
+                {% for paints in paintings %}
+                    <div class="filtr-item col-6 col-sm-6 col-md-4 card" data-category="{{ paints.category.id }}"
+                         data-sort="value" style="overflow: hidden">
+                            <div class="card-img">
+                                <a href="#"><img src="{{ asset('img/paints/' ~ paints.image) }}" class="card-img-top" alt="..."></a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><b>{{ paints.title }}</b></h5>
+                                <h6 class="card-author"><b>Auteur:</b> {{ paints.author }}</h6>
+                                <h6 class="card-date"><b>Date:</b> {{ paints.date }}</h6>
+                                <a href="#" class="btn btn-primary">En savoir plus</a>
+                            </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{ paints.title }}</b></h5>
-                        <h6 class="card-author"><b>Auteur:</b> {{ paints.author }}</h6>
-                        <h6 class="card-date"><b>Date:</b> {{ paints.date }}</h6>
-                        <a href="#" class="btn btn-primary">En savoir plus</a>
-                    </div>
-                </div>
-            {% endfor %}
-
+                {% endfor %}
+            </div>
         </div>
     </div>
 

@@ -64,7 +64,7 @@ class PaintingFixtures extends Fixture implements DependentFixtureInterface
        'La Cène',
        'La Dame à l\'hermine',
        'Guernica',
-       'La Montagne Sainte-Victoire vue de Bellevue',
+       'La Montagne Sainte-Victoire',
        'La Joconde',
        'Les Ménines',
        'Les Demoiselles d\'Avignon',
