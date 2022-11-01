@@ -252,3 +252,8 @@ footer i {
 .card-body h6 {
     color: black;
 }
+
+.team .card-img-top {
+    height: 350px;
+    object-fit: cover;
+}

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\TeamRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,8 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class TeamController extends AbstractController
 {
     #[Route('/team', name: 'team')]
-    public function team(): Response
+    public function team(TeamRepository $teamRepository): Response
     {
-        return $this->render('pages/team.html.twig');
+        $members = $teamRepository->findBy([], ['role' => 'ASC']);
+        return $this->render('pages/team.html.twig',
+        [
+            'members' => $members
+        ]
+        );
     }
 }
