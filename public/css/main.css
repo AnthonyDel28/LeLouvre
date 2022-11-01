@@ -257,3 +257,33 @@ footer i {
     height: 350px;
     object-fit: cover;
 }
+
+.back-paint {
+    background-image: url("../img/utils/home-contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paint h1 {
+    font-size: 45px;
+    color: white;
+    margin-top: 50px;
+}
+
+.paint hr {
+    color: white;
+}
+
+.paint .card {
+    padding: 0;
+    object-fit: cover;
+}
+
+.paint .description {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.paint .card-img-top {
+    height: 100%;
+}

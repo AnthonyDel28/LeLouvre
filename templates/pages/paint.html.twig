@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container-fluid back-paint">
+    <div class="container paint pb-5">
+        <div class="row text-center">
+            <h1>{{ painting.title }}</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="card col-6">
+                <img class="card-img-top" src="{{ asset('img/paints/' ~ painting.image) }}" alt="">
+            </div>
+            <div class="description col-6 align-middle">
+                <p>{{ painting.description }}</p>
+                <p><b>Auteur:</b> {{ painting.author }}</p>
+                <p><b>Date:</b> {{ painting.date }}</p>
+                <p><b>Dimensions originales:</b> {{ painting.height }} x {{ painting.width }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

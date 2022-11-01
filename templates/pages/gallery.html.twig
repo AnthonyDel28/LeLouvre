@@ -27,7 +27,8 @@
                                 <h5 class="card-title"><b>{{ paints.title }}</b></h5>
                                 <h6 class="card-author"><b>Auteur:</b> {{ paints.author }}</h6>
                                 <h6 class="card-date"><b>Date:</b> {{ paints.date }}</h6>
-                                <a href="#" class="btn btn-primary">En savoir plus</a>
+                                <a href="{{ path('paint', {slug:paints.slug}) }}" class="btn btn-primary">En savoir
+                                    plus</a>
                             </div>
                     </div>
                 {% endfor %}

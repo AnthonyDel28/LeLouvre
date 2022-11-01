@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Course;
+use App\Entity\Painting;
 use App\Repository\PaintingRepository;
 use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,5 +23,16 @@ class GalleryController extends AbstractController
                 'categories' => $categories
             ]
         );
+    }
+
+    /**
+     * @return Response
+     */
+    #[Route('paint/{slug}', name: 'paint')]
+    public function paint(Painting $painting): Response
+    {
+        return $this->render('pages/paint.html.twig', [
+            'painting' => $painting
+        ]);
     }
 }

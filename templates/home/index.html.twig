@@ -16,42 +16,20 @@
     </div>
     <div class="container-fluid">
         <div class="cards d-flex justify-content-evenly">
-            <div class="col-4 col-md-3 famous-card">
-                <div class="card-img">
-                    <img src="{{ asset('img/paints/la-joconde.jpg') }}" alt="">
-                </div>
+            {% for paint in paints %}
+                <div class="col-4 col-md-3 famous-card">
+                    <div class="card-img">
+                        <img src="{{ asset('img/paints/' ~ paint.image) }}" alt="">
+                    </div>
                     <div class="card-infos">
-                        <h3>La Joconde</h3>
-                        <h5>Léonard De Vinci</h5>
+                        <h3>{{ paint.title }}</h3>
+                        <h5>{{ paint.author }}</h5>
                         <a href="">
                             <button type="button" class="btn btn-light">Découvrir</button>
                         </a>
                     </div>
-            </div>
-            <div class="col-4 col-md-3 famous-card">
-                <div class="card-img">
-                    <img src="{{ asset('img/paints/la-nuit-etoilee.jpg') }}" alt="">
                 </div>
-                <div class="card-infos">
-                    <h3>La nuit étoilée</h3>
-                    <h5>Vincent Van Gogh</h5>
-                    <a href="">
-                        <button type="button" class="btn btn-light">Découvrir</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4 col-md-3 famous-card">
-                <div class="card-img">
-                    <img src="{{ asset('img/paints/un-baiser.jpg') }}" alt="">
-                </div>
-                <div class="card-infos">
-                    <h3>Le Baiser</h3>
-                    <h5>Francesco Hayez</h5>
-                    <a href="">
-                        <button type="button" class="btn btn-light">Découvrir</button>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="container home-about mt-5 mb-5">

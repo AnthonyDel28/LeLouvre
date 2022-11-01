@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Painting;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ObjectManager;
+use ReCaptcha\Response;
 
 /**
  * @extends ServiceEntityRepository<Painting>
