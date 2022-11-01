@@ -177,3 +177,62 @@ footer hr{
 .credits i {
     color: red;
 }
+
+.text-small {
+    font-size: 0.9rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.form-control {
+    background: #212529;
+    border-color: #545454;
+}
+
+.form-control:focus {
+    background: #212529;
+}
+
+footer {
+    background: black;
+}
+
+footer p,
+footer a {
+    color: white;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+footer i {
+    color: red;
+}
+
+.card-img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+    transition: transform 1s;
+}
+
+.card-img img:hover {
+    transform: scale(1.2);
+    height:500px;
+    width:100%;
+    overflow: hidden;
+}
+
+.gallery .card {
+    border: none;
+    height: 700px;
+}
