@@ -327,3 +327,17 @@ table td {
     background: #212529;
     color: white;
 }
+
+.carousel {
+    height: 400px;
+}
+
+.carousel-item,
+.carousel-item img {
+    object-fit: cover;
+    height: 400px;
+}
+
+.carousel-caption {
+    background-color: RGBA(0,0,0,0.59);
+}
