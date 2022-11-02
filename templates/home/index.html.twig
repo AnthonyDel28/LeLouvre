@@ -24,7 +24,7 @@
                     <div class="card-infos">
                         <h3>{{ paint.title }}</h3>
                         <h5>{{ paint.author }}</h5>
-                        <a href="">
+                        <a href="{{ path('paint', {slug:paint.slug}) }}">
                             <button type="button" class="btn btn-light">Découvrir</button>
                         </a>
                     </div>

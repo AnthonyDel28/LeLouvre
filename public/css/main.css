@@ -282,6 +282,12 @@ footer i {
 .paint .description {
     background-color: rgba(0,0,0,.5);
     color: #fff;
+    padding: 20px;
+}
+
+.paint .description::first-letter{
+    color: #6C4007;
+    font-size: 350%;
 }
 
 .paint .card-img-top {

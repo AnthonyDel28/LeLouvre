@@ -46,6 +46,9 @@ class Painting
     #[ORM\Column(length: 255)]
     private ?string $date = null;
 
+    #[ORM\Column]
+    private ?int $rarityScore = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -167,6 +170,18 @@ class Painting
     public function setDate(string $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getRarityScore(): ?int
+    {
+        return $this->rarityScore;
+    }
+
+    public function setRarityScore(int $rarityScore): self
+    {
+        $this->rarityScore = $rarityScore;
 
         return $this;
     }
