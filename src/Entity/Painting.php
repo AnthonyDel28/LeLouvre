@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Cocur\Slugify\Slugify;
 use App\Repository\PaintingRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -48,6 +49,9 @@ class Painting
 
     #[ORM\Column]
     private ?int $rarityScore = null;
+
+    #[ORM\Column]
+    private ?bool $visible = null;
 
     public function getId(): ?int
     {
@@ -184,5 +188,23 @@ class Painting
         $this->rarityScore = $rarityScore;
 
         return $this;
+    }
+
+    public function isVisible(): ?bool
+    {
+        return $this->visible;
+    }
+
+    public function setVisible(bool $visible): self
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    public function createSlug()
+    {
+        $slugify = new Slugify();
+        $this->slug = $slugify->slugify($this->title);
     }
 }

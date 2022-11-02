@@ -34,7 +34,8 @@ class PaintingFixtures extends Fixture implements DependentFixtureInterface
                     ->setSlug($slugify->slugify($this->paints[$x]))
                     ->setImage($slugify->slugify($this->paints[$x]) . '.jpg')
                     ->setDate($this->dates[$x])
-                    ->setRarityScore($faker->numberBetween(10, 100));
+                    ->setRarityScore($faker->numberBetween(10, 100))
+                    ->setVisible(TRUE);
                     $manager->persist($paint);
                     $x++;
             $manager->flush();

@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+{% block title %}Admin - Le Louvre{% endblock %}
+{% block body %}
+   <div class="container admin">
+       <div class="row text-center mt-5">
+           <h1>Administration</h1>
+           <hr>
+           <a href="{{ path('add') }}">
+               <button type="button" class="btn btn-light col-6 col-md-4">
+                   <i class="icofont-ui-add"></i>
+                   Ajouter une
+                   nouvelle
+                   peinture
+               </button>
+           </a>
+           <table class="table table-sm table-hover">
+               <thead>
+               <tr>
+                   <th scope="col">Peinture</th>
+                   <th scope="col">Titre</th>
+                   <th scope="col">Auteur</th>
+                   <th scope="col">Date</th>
+                   <th scope="col">Type</th>
+                   <th scope="col">Technique</th>
+                   <th scope="col">Dimensions</th>
+               </tr>
+               </thead>
+               <tbody>
+               {% for paint in paints %}
+                   <tr class="align-middle">
+                       <td>
+                           <div class="table-image">
+                               <img src="{{ asset('img/paints/' ~ paint.image) }}" alt="">
+                           </div>
+                       </td>
+                       <td>{{ paint.title }}</td>
+                       <td>{{ paint.author }}</td>
+                       <td>{{ paint.date }}</td>
+                       <td>{{ paint.category.name }}</td>
+                       <td>{{ paint.technic.name }}</td>
+                       <td>{{ paint.height }} X {{ paint.width }}</td>
+                       <td>
+                           <a href="{{ path('visible', { id:paint.id }) }}">
+                               <button type="button" class="btn btn-light">
+                                   {% if paint.visible %}
+                                        <i class="icofont-eye"></i>
+                                       Visible
+                                   {% else %}
+                                       <i class="icofont-eye-blocked"></i>
+                                       Non visible
+                                   {% endif %}
+                               </button>
+                           </a>
+                       </td>
+                       <td>
+                           <a href="{{ path('edit', { id:paint.id }) }}">
+                               <button type="button" class="btn btn-light">
+                                   <i class="icofont-edit"></i>
+                                   Modifier
+                               </button>
+                           </a>
+                       </td>
+                       <td>
+                           <a href="{{ path('delete', { id:paint.id }) }}">
+                               <button type="button" class="btn btn-light">
+                                   <i class="icofont-ui-delete"></i>
+                                   Supprimer
+                               </button>
+                           </a>
+                       </td>
+                   </tr>
+               {% endfor %}
+               </tbody>
+           </table>
+       </div>
+   </div>
+{% endblock %}
