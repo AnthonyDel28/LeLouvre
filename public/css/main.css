@@ -313,3 +313,17 @@ table th,
 table td {
     color: black;
 }
+
+
+.add {
+    margin-bottom: 100px;
+}
+
+.add .form-control {
+    color: white;
+}
+
+.add .form-select {
+    background: #212529;
+    color: white;
+}

@@ -8,6 +8,7 @@ use App\Form\CommentForm;
 use App\Form\PaintForm;
 use App\Repository\PaintingRepository;
 use App\Repository\CategoryRepository;
+use App\Repository\TechnicRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Egulias\EmailValidator\Warning\Comment;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,14 +20,16 @@ use Symfony\Component\Routing\Annotation\Route;
 class GalleryController extends AbstractController
 {
     #[Route('/gallery', name: 'gallery')]
-    public function gallery(PaintingRepository $paintingRepository, CategoryRepository $categoryRepository): Response
+    public function gallery(TechnicRepository $technicRepository, PaintingRepository $paintingRepository, CategoryRepository $categoryRepository): Response
     {
         $paintings = $paintingRepository->findAll();
         $categories = $categoryRepository->findAll();
+        $technics = $technicRepository->findAll();
         return $this->render('pages/gallery.html.twig',
             [
                 'paintings' => $paintings,
-                'categories' => $categories
+                'categories' => $categories,
+                'technics' => $technics
             ]
         );
     }

@@ -39,11 +39,13 @@ class PaintForm extends AbstractType
                 'label' => 'Histoire',
             ])
             ->add('category', EntityType::class, [
+                'label' => 'Catégorie',
                 'class'         => Category::class,
                 'choice_label'  => 'name',
                 'placeholder'   => 'Sélectionnez...',
             ])
             ->add('technic', EntityType::class, [
+                'label' => 'Technique',
                 'class'         => Technic::class,
                 'choice_label'  => 'name',
                 'placeholder'   => 'Sélectionnez ...'

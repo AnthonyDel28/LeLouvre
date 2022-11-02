@@ -2,14 +2,18 @@
 {% block title %} Ajouter une oeuvre {% endblock %}
 
 {% block body %}
-    <main class="container">
+    <main class="container add">
         <h3 class="display-5 my-3">Ajouter un article</h3>
         <div class="row">
-            <div class="col-md-8 offset-1">
-                {{ form_start(form) }}
-                {{ form_widget(form) }}
-                <button type="submit" class="btn btn-outline-secondary">Ajouter la peinture</button>
-                {{ form_end(form) }}
+            <div class="col-12">
+                <form>
+                    <div class="">
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <button type="submit" class="btn btn-outline-secondary">Ajouter la peinture</button>
+                        {{ form_end(form) }}
+                    </div>
+                </form>
             </div>
         </div>
     </main>

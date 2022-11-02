@@ -6,19 +6,25 @@
             <h1>Notre gallerie</h1>
             <hr>
         </div>
-        <div class="col-md-12 controls-filter">
+        <div class="col-md-12 controls-filter text-center">
             <ul>
                 <!-- For filtering controls add -->
                 <li data-filter="all" class="btn btn-outline-primary"> Toutes les peintures </li>
+                <br><br>
                 {% for category in categories %}
                     <li data-filter="{{ category.id }}" class="btn btn-outline-primary">{{ category.name }}</li>
+                {% endfor %}
+                <br><br>
+                {% for technic in technics %}
+                    <li data-filter="{{ technic.id }}" class="btn btn-outline-primary">{{ technic.name }}</li>
                 {% endfor %}
             </ul>
         </div>
         <div class="filter-container" style="overflow: hidden">
             <div class="row main-galery" style="overflow: hidden">
                 {% for paints in paintings %}
-                    <div class="filtr-item col-6 col-sm-6 col-md-4 card" data-category="{{ paints.category.id }}"
+                    <div class="filtr-item col-12 col-sm-6 col-md-4 card" data-category="{{ paints.category.id }}, {{
+                    paints.technic.id }}"
                          data-sort="value" style="overflow: hidden">
                             <div class="card-img">
                                 <a href="#"><img src="{{ asset('img/paints/' ~ paints.image) }}" class="card-img-top" alt="..."></a>
