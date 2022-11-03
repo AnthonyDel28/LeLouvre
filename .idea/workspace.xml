@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5ea01bee-4db6-419e-9ec5-bea0ba56bfbe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221103200729.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/paints/le-jardin-des-delices.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/PaintingFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/PaintingFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Painting.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Painting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/gallery.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/paint.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/paint.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +205,7 @@
       <workItem from="1667469721506" duration="10605000" />
       <workItem from="1667481036588" duration="4114000" />
       <workItem from="1667502383937" duration="1051000" />
-      <workItem from="1667503861059" duration="4568000" />
+      <workItem from="1667503861059" duration="5581000" />
     </task>
     <servers />
   </component>

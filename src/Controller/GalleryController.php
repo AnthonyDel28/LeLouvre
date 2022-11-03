@@ -22,7 +22,7 @@ class GalleryController extends AbstractController
     #[Route('/gallery', name: 'gallery')]
     public function gallery(TechnicRepository $technicRepository, PaintingRepository $paintingRepository, CategoryRepository $categoryRepository): Response
     {
-        $paintings = $paintingRepository->findAll();
+        $paintings = $paintingRepository->findBy(['visible' => TRUE]);
         $categories = $categoryRepository->findAll();
         $technics = $technicRepository->findAll();
         return $this->render('pages/gallery.html.twig',

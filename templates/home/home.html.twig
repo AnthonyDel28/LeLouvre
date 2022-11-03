@@ -1,24 +1,102 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container-fluid">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="..." alt="First slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('img/slider/slider_1.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Un musée à la reconnaissance mondiale </h5>
+                    <p>Le Louvre renferme des secrets en provenance du monde entier</p>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item active">
+                <img src="{{ asset('img/slider/slider_2.jpg') }}" class="d-block w-100" alt="..." style="object-position: bottom">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Un trésor inestimable</h5>
+                    <p>Les plus belles oeuvres de notre civilisation regroupées dans un seul musée</p>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+            <div class="carousel-item active">
+                <img src="{{ asset('img/slider/slider_3.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Un voyage dans le temps</h5>
+                    <p>Préparez vous à traverser le temps et l'espace, à découvrir des reliques d'un autre temps</p>
                 </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
     </div>
     <div class="container">
-        <div class="row famous">
-            <div class="col-4">
+        <div class="row">
+            <div class="col-4 m-5">
                 <h2>Nos vedettes</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="cards d-flex justify-content-evenly">
+            {% for paint in paints %}
+                <div class="col-4 col-md-3 famous-card">
+                    <div class="card-img">
+                        <img src="{{ asset('img/paints/' ~ paint.imageName) }}" alt="">
+                    </div>
+                    <div class="card-infos">
+                        <h3>{{ paint.title }}</h3>
+                        <h5>{{ paint.author }}</h5>
+                        <a href="{{ path('paint', {slug:paint.slug}) }}">
+                            <button type="button" class="btn btn-light">Découvrir</button>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container home-about mt-5 mb-5">
+        <hr>
+        <div class="row d-flex flex-row-reverse">
+            <div class="col-10 m-5 text-align-right">
+                <h2>Le Louvre c'est ...</h2>
+            </div>
+        </div>
+        <div class="row col-12 home-about-infos">
+            <div class="col-6 about-square">
+                <div class="col-12">
+                    <ul>
+                        <li><i class="icofont-ui-timer"></i>  Plus de 1000 ans d'histoire</li>
+                        <li><i class="icofont-paint"></i>  Des oeuvres du monde entier</li>
+                        <li><i class="icofont-compass-alt"></i> Un voyage à travers le temps et l'espace</li>
+                        <li><i class="icofont-info-circle"></i> Des visites sur mesure</li>
+                        <li><i class="icofont-institution"></i> Une institution unique au monde</li>
+                        <li><i class="icofont-library"></i> Les plus beaux trésors de notre patrimoine</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 about-square-img">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid contact-slider">
+        <div class="container">
+            <div class="row">
+                <div class="contact-content">
+                    <h3>Restons en contact</h3>
+                    <h3>Recevez de nos nouvelles!</h3>
+                    <a href="">
+                        <button type="button" class="btn btn-light">Nous contacter</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
