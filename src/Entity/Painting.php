@@ -34,11 +34,11 @@ class Painting
     #[ORM\Column]
     private ?int $width = null;
 
-    #[Vich\UploadableField(mapping: 'paints_images', fileNameProperty: 'image')]
+    #[Vich\UploadableField(mapping: 'paints_images', fileNameProperty: 'image_name')]
     private ?File $imageFile = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $image = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image_name = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
@@ -62,6 +62,7 @@ class Painting
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $updatedAt = null;
+
 
     public function getId(): ?int
     {
@@ -151,14 +152,14 @@ class Painting
         return $this->imageFile;
     }
 
-    public function getImage(): ?string
+    public function getImageName(): ?string
     {
-        return $this->image;
+        return $this->image_name;
     }
 
-    public function setImage(string $image): self
+    public function setImageName(?string $image_name): self
     {
-        $this->image = $image;
+        $this->image_name = $image_name;
 
         return $this;
     }
@@ -252,4 +253,5 @@ class Painting
 
         return $this;
     }
+
 }

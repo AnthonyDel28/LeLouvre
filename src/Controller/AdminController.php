@@ -44,7 +44,6 @@ class AdminController extends AbstractController
         $form = $this->createForm(PaintType::class, $paint);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
-            $paint->setImage('default.jpg');
             $paint->createSlug();
             $paint->setRarityScore($faker->numberBetween(1, 99));
             $manager->persist($paint);

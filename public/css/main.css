@@ -406,3 +406,21 @@ table td {
 .add-form {
     margin-bottom: 50px;
 }
+
+.about-1 {
+    margin-bottom: 50px;
+}
+
+.about-img-1 {
+    background-image: url("../img/utils/about-1.jpg");
+    height: 500px;
+    background-size: cover;
+}
+
+
+
+.about-img-2 {
+    background-image: url("../img/utils/about-2.jpg");
+    height: 500px;
+    background-size: cover;
+}
