@@ -292,6 +292,8 @@ footer i {
 
 .paint .card-img-top {
     height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 .table-image {
@@ -340,4 +342,9 @@ table td {
 
 .carousel-caption {
     background-color: RGBA(0,0,0,0.59);
+}
+
+.comment h1,
+.comment hr {
+    color: white;
 }
