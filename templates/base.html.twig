@@ -23,5 +23,12 @@
 {% block body %}{% endblock %}
 {% include 'partials/footer.html.twig' %}
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script>
+    function init() {
+        document.getElementById("author").value = "";
+        document.getElementById("content").value = "";
+    }
+    window.onload = init;
+</script>
 </body>
 </html>

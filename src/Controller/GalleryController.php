@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Painting;
 use App\Entity\Comments;
-use App\Form\CommentForm;
-use App\Form\PaintForm;
+use App\Form\CommentType;
+use App\Form\PaintType;
 use App\Repository\PaintingRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\TechnicRepository;
@@ -50,7 +50,7 @@ class GalleryController extends AbstractController
     {
         $faker = Faker\Factory::create('fr_FR');
         $paint = new Painting();
-        $form = $this->createForm(PaintForm::class, $paint);
+        $form = $this->createForm(PaintType::class, $paint);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
             $paint->setImage('default.jpg');

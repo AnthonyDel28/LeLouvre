@@ -344,7 +344,49 @@ table td {
     background-color: RGBA(0,0,0,0.59);
 }
 
+.comment {
+    margin-bottom: 50px;
+}
+
 .comment h1,
-.comment hr {
+.comment hr,
+.comment h2 {
     color: white;
+}
+
+.comment .form-control {
+    background-color: #FFFFFF;
+    color: black;
+}
+.comment textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.comment label {
+    color: white;
+}
+
+.comment .comments {
+    background-color: RGBA(0,0,0,0.40);
+    border: 1px solid white;
+}
+
+.comments,
+.comments hr,
+.comments h4,
+.comments p{
+    color: white;
+}
+
+.comments .comment-author {
+    font-family: Helvetica;
+    font-size: 13px;
 }

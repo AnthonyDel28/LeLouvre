@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Painting;
-use App\Form\PaintForm;
+use App\Form\PaintType;
 use App\Repository\PaintingRepository;
 use Cocur\Slugify\Slugify;
 use Doctrine\ORM\EntityManagerInterface;
@@ -41,7 +41,7 @@ class AdminController extends AbstractController
     {
         $faker = Faker\Factory::create('fr_FR');
         $paint = new Painting();
-        $form = $this->createForm(PaintForm::class, $paint);
+        $form = $this->createForm(PaintType::class, $paint);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
             $paint->setImage('default.jpg');
@@ -66,7 +66,7 @@ class AdminController extends AbstractController
     #[Route('admin/edit/{id}', name: 'edit')]
     public function edit(EntityManagerInterface $manager, Painting $painting, Request $request)
     {
-        $form = $this->createForm(PaintForm::class, $painting);
+        $form = $this->createForm(PaintType::class, $painting);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $painting->createSlug();

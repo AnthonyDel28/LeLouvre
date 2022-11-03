@@ -4,8 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Painting;
 use App\Entity\Comments;
-use App\Form\CommentForm;
-use App\Form\PaintForm;
+use App\Form\CommentType;
+use App\Form\PaintType;
+use App\Repository\CommentsRepository;
 use App\Repository\PaintingRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\TechnicRepository;
@@ -23,11 +24,27 @@ class PaintController extends AbstractController
      * @return Response
      */
     #[Route('paint/{slug}', name: 'paint')]
-    public function paint(Painting $painting, Request $request, EntityManagerInterface $manager): Response
+    public function paint(Painting $painting, CommentsRepository $commentsRepository, Request $request,
+                          EntityManagerInterface $manager):
+    Response
     {
-        return $this->render('pages/paint.html.twig', [
+        $comment = new Comments();
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+        $id = $painting->getId();
+        $slug = $painting->getSlug();
+        $comments = $commentsRepository->findBy(['paint' => $id]);
+        if($form->isSubmitted() && $form->isValid()){
+            $comment->setDate(new \DateTimeImmutable());
+            $comment->setPaint($painting);
+            $manager->persist($comment);
+            $manager->flush();
+            return $this->redirect($request->getUri());
+        }
+        return $this->renderForm('pages/paint.html.twig', [
             'painting' => $painting,
+            'form' => $form,
+            'comments' => $comments
         ]);
     }
-
 }

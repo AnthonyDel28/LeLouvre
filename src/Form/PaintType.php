@@ -16,7 +16,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 
-class PaintForm extends AbstractType
+class PaintType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
