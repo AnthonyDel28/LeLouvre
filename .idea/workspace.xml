@@ -6,13 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="5ea01bee-4db6-419e-9ec5-bea0ba56bfbe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221026142540.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221026164051.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221101192226.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221101192639.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221101194754.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221102095804.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221102172620.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221102191230.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GalleryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PaintController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CommentForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PaintForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PaintType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/paint.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/paint.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +212,8 @@
       <workItem from="1667418728030" duration="5791000" />
       <workItem from="1667428761447" duration="448000" />
       <workItem from="1667430842749" duration="1397000" />
-      <workItem from="1667469721506" duration="6195000" />
+      <workItem from="1667469721506" duration="10605000" />
+      <workItem from="1667481036588" duration="4114000" />
     </task>
     <servers />
   </component>

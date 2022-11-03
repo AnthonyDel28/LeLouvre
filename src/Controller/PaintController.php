@@ -20,9 +20,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PaintController extends AbstractController
 {
-    /**
-     * @return Response
-     */
     #[Route('paint/{slug}', name: 'paint')]
     public function paint(Painting $painting, CommentsRepository $commentsRepository, Request $request,
                           EntityManagerInterface $manager):
@@ -33,10 +30,11 @@ class PaintController extends AbstractController
         $form->handleRequest($request);
         $id = $painting->getId();
         $slug = $painting->getSlug();
-        $comments = $commentsRepository->findBy(['paint' => $id]);
+        $comments = $commentsRepository->findBy(['paint' => $id, 'visible' => '1']);
         if($form->isSubmitted() && $form->isValid()){
             $comment->setDate(new \DateTimeImmutable());
             $comment->setPaint($painting);
+            $comment->setVisible(TRUE);
             $manager->persist($comment);
             $manager->flush();
             return $this->redirect($request->getUri());

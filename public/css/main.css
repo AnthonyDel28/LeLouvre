@@ -390,3 +390,11 @@ table td {
     font-family: Helvetica;
     font-size: 13px;
 }
+
+.edit {
+    margin-bottom: 50px;
+}
+
+.edit .form-control {
+    color: white;
+}

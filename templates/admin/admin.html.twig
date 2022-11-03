@@ -61,6 +61,14 @@
                            </a>
                        </td>
                        <td>
+                           <a href="{{ path('comments', { id:paint.id }) }}">
+                               <button type="button" class="btn btn-light">
+                                   <i class="icofont-comment"></i>
+                                   Commentaires
+                               </button>
+                           </a>
+                       </td>
+                       <td>
                            <a href="{{ path('delete', { id:paint.id }) }}">
                                <button type="button" class="btn btn-light">
                                    <i class="icofont-ui-delete"></i>

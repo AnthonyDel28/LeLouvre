@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}Admin - Le Louvre{% endblock %}
+{% block body %}
+    <div class="container admin">
+        <div class="row text-center mt-5">
+            <h1>Gestion des commentaires</h1>
+            <hr>
+            <table class="table table-sm table-hover">
+                {% if comments|length >= 1 %}
+                <thead>
+                <tr>
+                    <th scope="col">Peinture</th>
+                    <th scope="col">Auteur du commentaire</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Commentaire</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for comment in comments %}
+                    <tr class="align-middle">
+                        <td>{{ comment.paint.title }}</td>
+                        <td>{{ comment.author }}</td>
+                        <td>{{ comment.date|date('d-m-Y h:i') }}</td>
+                        <td>{{ comment.content }}</td>
+                        <td>
+                            <a href="{{ path('deletecom', { id:comment.id }) }}">
+                                <button type="button" class="btn btn-light">
+                                    <i class="icofont-ui-delete"></i>
+                                    Supprimer
+                                </button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('hide', { id:comment.id }) }}">
+                                <button type="button" class="btn btn-light">
+                                    {% if comment.visible %}
+                                        <i class="icofont-eye"></i>
+                                        Visible
+                                    {% else %}
+                                        <i class="icofont-eye-blocked"></i>
+                                        Non visible
+                                    {% endif %}
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                {% else %}
+                    <h5>Cette oeuvre ne possède aucun commentaire !</h5>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
