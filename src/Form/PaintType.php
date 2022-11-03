@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 
 class PaintType extends AbstractType
@@ -56,6 +57,7 @@ class PaintType extends AbstractType
             ->add('width', TextType::class, [
                 'label' => 'Largeur'
             ])
+            ->add('imageFile', VichImageType::class)
             ->add('visible', ChoiceType::class, [
                 'label' => 'Afficher',
                 'choices' => ['Oui' => 1, 'Non' => 0]
