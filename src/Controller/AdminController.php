@@ -39,8 +39,8 @@ class AdminController extends AbstractController
     #[Route('/admin/add', name: 'add')]
     public function add(Request $request, EntityManagerInterface $manager)
     {
-        $faker = Faker\Factory::create('fr_FR');
         $paint = new Painting();
+        $faker = Faker\Factory::create();
         $form = $this->createForm(PaintType::class, $paint);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
@@ -54,7 +54,6 @@ class AdminController extends AbstractController
         return $this->renderForm('admin/add.html.twig', [
             'form' => $form,
         ]);
-
     }
 
     /**

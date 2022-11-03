@@ -398,3 +398,11 @@ table td {
 .edit .form-control {
     color: white;
 }
+
+.add-form .form-control {
+    color: white;
+}
+
+.add-form {
+    margin-bottom: 50px;
+}

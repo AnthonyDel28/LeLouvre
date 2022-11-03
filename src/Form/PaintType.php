@@ -60,6 +60,7 @@ class PaintType extends AbstractType
                 'label' => 'Afficher',
                 'choices' => ['Oui' => 1, 'Non' => 0]
             ])
+
         ;
     }
 
