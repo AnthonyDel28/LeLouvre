@@ -48,6 +48,7 @@ class AdminController extends AbstractController
             $paint->setRarityScore($faker->numberBetween(1, 99));
             $manager->persist($paint);
             $manager->flush();
+            $this->addFlash('success', 'Peinture ajoutée avec succès!');
             return $this->redirectToRoute('admin');
         }
         return $this->renderForm('admin/add.html.twig', [
@@ -69,6 +70,7 @@ class AdminController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $painting->createSlug();
             $manager->flush();
+            $this->addFlash('success', 'Peinture modifiée avec succès!');
             return $this->redirectToRoute('admin');
         }
         return $this->renderForm('admin/edit.html.twig', [
@@ -95,6 +97,7 @@ class AdminController extends AbstractController
         }
         $manager->remove($painting);
         $manager->flush();
+        $this->addFlash('success', 'Peinture supprimée avec succès!');
         return $this->redirectToRoute('admin');
     }
 
@@ -131,6 +134,7 @@ class AdminController extends AbstractController
         $route = $request->headers->get('referer');
         $manager->remove($comments);
         $manager->flush();
+        $this->addFlash('success', 'Commentaire supprimé !');
         return $this->redirect($route);
     }
 }

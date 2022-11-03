@@ -3,6 +3,11 @@
 {% block body %}
    <div class="container admin">
        <div class="row text-center mt-5">
+           {% for message in app.flashes('success') %}
+               <div class="alert alert-success">
+                   {{ message }}
+               </div>
+           {% endfor %}
            <h1>Administration</h1>
            <hr>
            <a href="{{ path('add') }}">

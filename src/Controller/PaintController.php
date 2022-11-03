@@ -37,6 +37,7 @@ class PaintController extends AbstractController
             $comment->setVisible(TRUE);
             $manager->persist($comment);
             $manager->flush();
+            $this->addFlash('success', 'Commentaire ajouté avec succès !');
             return $this->redirect($request->getUri());
         }
         return $this->renderForm('pages/paint.html.twig', [

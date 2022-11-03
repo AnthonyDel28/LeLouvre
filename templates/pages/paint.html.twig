@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="container-fluid back-paint">
+<div class="container-fluid back-paint text-center">
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class="container paint pb-5">
         <div class="row text-center">
             <h1>{{ painting.title }}</h1>
