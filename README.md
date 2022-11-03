@@ -25,6 +25,7 @@ Pour mon projet je me suis inspiré du Musée du Louvre, l'un des plus connus au
       - Modifier cette peinture (ses infos ainsi que son image)
       - Lister les commentaires de chaque oeuvre et les modifier
       - Supprimer une peinture
+      - Les confirmations se font via des messages flash
 
 ## Outils utilisés: :diamond_shape_with_a_dot_inside:
 ![Symfony](https://img.shields.io/badge/Symfony-V6-red)
