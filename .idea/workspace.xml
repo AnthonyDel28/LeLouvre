@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5ea01bee-4db6-419e-9ec5-bea0ba56bfbe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PaintController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/comments.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/comments.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/paint.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/paint.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/paints/blackandwhite-636423a394cde622082818.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/paints/la-naissance-de-venus.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +205,7 @@
       <workItem from="1667502383937" duration="1051000" />
       <workItem from="1667503861059" duration="6201000" />
       <workItem from="1667512627680" duration="693000" />
+      <workItem from="1667757303836" duration="603000" />
     </task>
     <servers />
   </component>
